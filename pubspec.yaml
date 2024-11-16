@@ -30,7 +30,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  tflite_flutter: ^0.11.0
   camera: ^0.10.0+1
+  meta: ^1.1.8
+  quiver: ^3.0.1
+  path_provider: ^2.0.1
+  tuple: ^2.0.0
+  image: ^3.0.2
+  http: ^0.13.4
+  geolocator: ^10.1.0
+  google_maps_webservice: ^0.0.20-nullsafety.5
+  url_launcher: ^6.0.20
+  
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -89,3 +101,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+assets:
+  - assets/model.tflite
+  - assets/labels.txt
