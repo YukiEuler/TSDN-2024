@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695313956830",
+    "project_id": "tsdn-monkeypox",
+    "storage_bucket": "tsdn-monkeypox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695313956830:android:488b19fbaa95571940274f",
+        "android_client_info": {
+          "package_name": "org.tsdn.monkeypox.tsdn_monkeypox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA72zxfDSfmKxidtOExe6prg1Eg7ozEZLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

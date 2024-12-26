@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tflite_flutter: ^0.11.0
+  shared_preferences: ^2.3.3
   camera: ^0.10.0+1
   meta: ^1.1.8
   quiver: ^3.0.1
@@ -41,7 +41,10 @@ dependencies:
   geolocator: ^10.1.0
   google_maps_webservice: ^0.0.20-nullsafety.5
   url_launcher: ^6.0.20
-  
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  firebase_storage: ^11.2.4
+  intl: ^0.18.0
 
 
 
@@ -59,6 +62,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.9.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -102,6 +106,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 
-assets:
-  - assets/model.tflite
-  - assets/labels.txt
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"

@@ -3,12 +3,14 @@ plugins {
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
 }
 
 android {
     namespace = "org.tsdn.monkeypox.tsdn_monkeypox"
+    compileSdkVersion = 23
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -24,7 +26,10 @@ android {
         applicationId = "org.tsdn.monkeypox.tsdn_monkeypox"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdkVersion = 23
+        targetSdkVersion = 33
+        // minSdk = flutter.minSdkVersion
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -35,6 +40,12 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
+
+            minifyEnabled true
+            // Enables resource shrinking, which further reduces the size of your APK
+            shrinkResources true
+            // Includes the default ProGuard rules files that are packaged with the Android Gradle plugin
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -45,4 +56,6 @@ flutter {
 
 dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation platform('com.google.firebase:firebase-bom:33.6.0')
+    implementation 'com.google.firebase:firebase-analytics'
 }
